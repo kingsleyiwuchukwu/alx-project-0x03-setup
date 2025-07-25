@@ -1,16 +1,14 @@
-import { ReactNode } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+// components/layouts/Layout.tsx
 
-interface LayoutProps {
-  children: ReactNode;
-}
+import { LayoutProps } from '@/interface';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="pt-24 px-4">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );
